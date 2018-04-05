@@ -1,0 +1,330 @@
+
+*
+{
+    font-family: Arial;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+header
+{
+	margin: 31px 0px 10px 25px;
+	width: 850px;
+}
+
+#select
+{
+	display: inline-block;
+	margin-right: 25px;
+}
+
+#options
+{
+	margin-right: 50px;
+}
+
+#load-container
+{
+	display: inline-block;
+}
+
+#load-box
+{
+	display: inline-block;
+}
+
+#load-indicator
+{
+	margin-left: 5px;
+}
+
+#audio-fade
+{
+	margin-top: 7px;
+	visibility: hidden;
+}
+
+#audio-fade input
+{
+	width: 50px;
+	height: 20px;
+	font-size: 15px;
+	padding-left: 3px;
+}
+
+
+
+.piano-desk
+{
+	width: 4670px;
+	padding: 15px 15px 25px 18px;
+	background-color: #171719;
+}
+
+.piano-content
+{
+}
+
+.piano-octave
+{
+	display: inline-block;
+}
+
+.piano-octave:nth-last-of-type(n+2)
+{
+	margin-right: 10px;
+}
+
+.octave-top-first
+{
+	width: 153px;
+	margin-bottom: 5px;
+}
+
+.octave-top
+{
+	width: 543px;
+	margin-bottom: 5px; 
+}
+
+.octave-top-name
+{
+	color: white;
+	height: 40px;
+	margin-bottom: 5px;
+	text-align: center;
+}
+
+.octave-top-border
+{
+	border: 4px solid #00FF00;
+	border-bottom: none;
+	margin-bottom: 0px;
+	height: 20px;
+}
+
+.octave-top-notes
+{
+    position: relative;
+	height: 40px;
+}
+
+.octave-top-notes div
+{
+	display: inline-block;
+	width: 32px;
+	color: white;
+    text-align: center;
+    position: absolute;
+}
+
+.octave-top-first .octave-top-notes div:nth-of-type(1)
+{
+	left: 10px;
+}
+
+.octave-top-first .octave-top-notes div:nth-of-type(2)
+{
+	left: 60px;
+}
+
+.octave-top-first .octave-top-notes div:nth-of-type(3)
+{
+	left: 107px;
+}
+
+
+.octave-top .octave-top-notes div:nth-of-type(1)
+{
+	left: 10px;
+}
+
+.octave-top .octave-top-notes div:nth-of-type(2)
+{
+	left: 60px;
+}
+
+.octave-top .octave-top-notes div:nth-of-type(3)
+{
+	left: 98px;
+}
+
+.octave-top .octave-top-notes div:nth-of-type(4)
+{
+	left: 137px;
+}
+
+.octave-top .octave-top-notes div:nth-of-type(5)
+{
+	left: 187px;
+}
+
+.octave-top .octave-top-notes div:nth-of-type(6)
+{
+	left: 242px;
+}
+
+.octave-top .octave-top-notes div:nth-of-type(7)
+{
+	left: 291px;
+}
+
+.octave-top .octave-top-notes div:nth-of-type(8)
+{
+	left: 327px;
+}
+
+.octave-top .octave-top-notes div:nth-of-type(9)
+{
+	left: 368px;
+}
+
+.octave-top .octave-top-notes div:nth-of-type(10)
+{
+	left: 414px;
+}
+
+.octave-top .octave-top-notes div:nth-of-type(11)
+{
+	left: 450px;
+}
+
+.octave-top .octave-top-notes div:nth-of-type(12)
+{
+	left: 497px;
+}
+
+.ovtave-middle
+{
+	height: 530px;
+	position: relative;
+	background-color: black;
+}
+
+.ovtave-middle div
+{
+	position: absolute;
+}
+
+.ovtave-middle div:nth-of-type(1)
+{
+	left: 0px;
+}
+
+.ovtave-middle div:nth-of-type(2)
+{
+	left: 52px;
+}
+
+.ovtave-middle div:nth-of-type(3)
+{
+	left: 78px;
+}
+
+.ovtave-middle div:nth-of-type(4)
+{
+	left: 130px;
+}
+
+.ovtave-middle div:nth-of-type(5)
+{
+	left: 156px;
+}
+
+.ovtave-middle div:nth-of-type(6)
+{
+	left: 234px;
+}
+
+.ovtave-middle div:nth-of-type(7)
+{
+	left: 286px;
+}
+
+.ovtave-middle div:nth-of-type(8)
+{
+	left: 312px;
+}
+
+.ovtave-middle div:nth-of-type(9)
+{
+	left: 364px;
+}
+
+.ovtave-middle div:nth-of-type(10)
+{
+	left: 390px;
+}
+
+.ovtave-middle div:nth-of-type(11)
+{
+	left: 443px;
+}
+
+.ovtave-middle div:nth-of-type(12)
+{
+	left: 468px;
+}
+
+
+
+
+
+
+[data-name="whiteKey"]
+{
+	width: 74px;
+	height: 530px;
+}
+
+[data-name="blackKey"]
+{
+	width: 47px;
+	height: 274px;
+	z-index: 1;
+/*	box-shadow: 0px 0px 0px 50px rgba(0,255,0,0.2) inset;*/
+}
+
+[data-name="whiteKey"][data-state="unpressed"]
+{
+	background-image: url(../img/white_unpressed.png);
+	background-size: 100% 100%;
+}
+
+[data-name="whiteKey"][data-state="pressed"]
+{
+	background-image: url(../img/white_pressed.png);
+	background-size: 100% 100%;
+}
+
+[data-name="blackKey"][data-state="unpressed"]
+{
+	background-image: url(../img/black_unpressed.png);
+	background-size: 100% 100%;
+}
+
+[data-name="blackKey"][data-state="pressed"]
+{
+	background-image: url(../img/black_pressed.png);
+	background-size: 100% 100%;
+}
+
+
+.info
+{
+	width: 600px;
+	margin: 10px 0px 200px 20px;
+	white-space: pre-wrap;
+}
+
+
+
+

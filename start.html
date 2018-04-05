@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Piano</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/styles.css">
+	<link href="img/favicon_picture.ico" rel="icon" type="image/x-icon">
+</head>
+<body>
+
+
+
+<header>
+
+<div id="select" >
+</div>
+
+<a id="options" href="options.html" target="_blank">Настройки</a> 
+
+<div id="load-container">
+	<div id="load-box">
+		<span>Загрузка:</span> <progress id="load-indicator" value="0" max="99"></progress>
+	</div>
+</div>
+
+<div id="audio-fade" >
+	время убывания звука (с): <input type="text">
+</div>
+
+</header>
+
+
+
+<div class="piano-desk">
+	<div class="piano-content">
+
+		<div class="piano-octave">
+			<div class="octave-top-first">
+				<div class="octave-top-name">
+					<p>Субконтроктава</p>
+					<p>(0)</p>
+				</div>
+				<div class="octave-top-border">
+				</div>
+				<div class="octave-top-notes">
+					<div>
+						<p>A</p>
+						<p>Ля</p>
+					</div>
+					<div>
+						<p>A#</p>
+						<p>Ля#</p>
+					</div>
+					<div>
+						<p>B</p>
+						<p>Си</p>
+					</div>
+				</div>
+			</div>
+			<div class="ovtave-middle">
+				<div data-name="whiteKey" data-state="unpressed" data-index="0"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="1"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="2"></div>
+			</div>
+			<div class="octave-bottom">
+			</div>
+		</div>
+
+		<div class="piano-octave">
+			<div class="octave-top">
+				<div class="octave-top-name">
+					<p>Контроктава</p>
+					<p>(1)</p>
+				</div>
+				<div class="octave-top-border">
+				</div>
+				<div class="octave-top-notes">
+					<div>
+						<p>C</p>
+						<p>До</p>
+					</div>
+					<div>
+						<p>C#</p>
+						<p>До#</p>
+					</div>
+					<div>
+						<p>D</p>
+						<p>Ре</p>
+					</div>
+					<div>
+						<p>D#</p>
+						<p>Ре#</p>
+					</div>
+					<div>
+						<p>E</p>
+						<p>Ми</p>
+					</div>
+					<div>
+						<p>F</p>
+						<p>Фа</p>
+					</div>
+					<div>
+						<p>F#</p>
+						<p>Фа#</p>
+					</div>
+					<div>
+						<p>G</p>
+						<p>Соль</p>
+					</div>
+					<div>
+						<p>G#</p>
+						<p>Соль#</p>
+					</div>
+					<div>
+						<p>A</p>
+						<p>Ля</p>
+					</div>
+					<div>
+						<p>A#</p>
+						<p>Ля#</p>
+					</div>
+					<div>
+						<p>B</p>
+						<p>Си</p>
+					</div>					
+				</div>
+			</div>
+			<div class="ovtave-middle">
+				<div data-name="whiteKey" data-state="unpressed" data-index="3"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="4"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="5"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="6"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="7"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="8"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="9"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="10"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="11"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="12"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="13"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="14"></div>
+			</div>
+			<div class="octave-bottom">
+			</div>
+		</div>
+
+		<div class="piano-octave">
+			<div class="octave-top">
+				<div class="octave-top-name">
+					<p>Большая октава</p>
+					<p>(2)</p>
+				</div>
+				<div class="octave-top-border">
+				</div>
+				<div class="octave-top-notes">
+					<div>
+						<p>C</p>
+						<p>До</p>
+					</div>
+					<div>
+						<p>C#</p>
+						<p>До#</p>
+					</div>
+					<div>
+						<p>D</p>
+						<p>Ре</p>
+					</div>
+					<div>
+						<p>D#</p>
+						<p>Ре#</p>
+					</div>
+					<div>
+						<p>E</p>
+						<p>Ми</p>
+					</div>
+					<div>
+						<p>F</p>
+						<p>Фа</p>
+					</div>
+					<div>
+						<p>F#</p>
+						<p>Фа#</p>
+					</div>
+					<div>
+						<p>G</p>
+						<p>Соль</p>
+					</div>
+					<div>
+						<p>G#</p>
+						<p>Соль#</p>
+					</div>
+					<div>
+						<p>A</p>
+						<p>Ля</p>
+					</div>
+					<div>
+						<p>A#</p>
+						<p>Ля#</p>
+					</div>
+					<div>
+						<p>B</p>
+						<p>Си</p>
+					</div>					
+				</div>
+			</div>
+			<div class="ovtave-middle">
+				<div data-name="whiteKey" data-state="unpressed" data-index="15"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="16"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="17"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="18"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="19"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="20"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="21"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="22"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="23"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="24"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="25"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="26"></div>
+			</div>
+			<div class="octave-bottom">
+			</div>
+		</div>
+
+		<div class="piano-octave">
+			<div class="octave-top">
+				<div class="octave-top-name">
+					<p>Малая октава</p>
+					<p>(3)</p>
+				</div>
+				<div class="octave-top-border">
+				</div>
+				<div class="octave-top-notes">
+					<div>
+						<p>C</p>
+						<p>До</p>
+					</div>
+					<div>
+						<p>C#</p>
+						<p>До#</p>
+					</div>
+					<div>
+						<p>D</p>
+						<p>Ре</p>
+					</div>
+					<div>
+						<p>D#</p>
+						<p>Ре#</p>
+					</div>
+					<div>
+						<p>E</p>
+						<p>Ми</p>
+					</div>
+					<div>
+						<p>F</p>
+						<p>Фа</p>
+					</div>
+					<div>
+						<p>F#</p>
+						<p>Фа#</p>
+					</div>
+					<div>
+						<p>G</p>
+						<p>Соль</p>
+					</div>
+					<div>
+						<p>G#</p>
+						<p>Соль#</p>
+					</div>
+					<div>
+						<p>A</p>
+						<p>Ля</p>
+					</div>
+					<div>
+						<p>A#</p>
+						<p>Ля#</p>
+					</div>
+					<div>
+						<p>B</p>
+						<p>Си</p>
+					</div>					
+				</div>
+			</div>
+			<div class="ovtave-middle">
+				<div data-name="whiteKey" data-state="unpressed" data-index="27"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="28"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="29"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="30"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="31"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="32"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="33"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="34"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="35"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="36"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="37"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="38"></div>
+			</div>
+			<div class="octave-bottom">
+			</div>
+		</div>
+
+		<div class="piano-octave">
+			<div class="octave-top">
+				<div class="octave-top-name">
+					<p>Первая октава</p>
+					<p>(4)</p>
+				</div>
+				<div class="octave-top-border">
+				</div>
+				<div class="octave-top-notes">
+					<div>
+						<p>C</p>
+						<p>До</p>
+					</div>
+					<div>
+						<p>C#</p>
+						<p>До#</p>
+					</div>
+					<div>
+						<p>D</p>
+						<p>Ре</p>
+					</div>
+					<div>
+						<p>D#</p>
+						<p>Ре#</p>
+					</div>
+					<div>
+						<p>E</p>
+						<p>Ми</p>
+					</div>
+					<div>
+						<p>F</p>
+						<p>Фа</p>
+					</div>
+					<div>
+						<p>F#</p>
+						<p>Фа#</p>
+					</div>
+					<div>
+						<p>G</p>
+						<p>Соль</p>
+					</div>
+					<div>
+						<p>G#</p>
+						<p>Соль#</p>
+					</div>
+					<div>
+						<p>A</p>
+						<p>Ля</p>
+					</div>
+					<div>
+						<p>A#</p>
+						<p>Ля#</p>
+					</div>
+					<div>
+						<p>B</p>
+						<p>Си</p>
+					</div>					
+				</div>
+			</div>
+			<div class="ovtave-middle">
+				<div data-name="whiteKey" data-state="unpressed" data-index="39"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="40"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="41"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="42"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="43"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="44"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="45"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="46"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="47"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="48"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="49"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="50"></div>
+			</div>
+			<div class="octave-bottom">
+			</div>
+		</div>
+
+		<div class="piano-octave">
+			<div class="octave-top">
+				<div class="octave-top-name">
+					<p>Вторая октава</p>
+					<p>(5)</p>
+				</div>
+				<div class="octave-top-border">
+				</div>
+				<div class="octave-top-notes">
+					<div>
+						<p>C</p>
+						<p>До</p>
+					</div>
+					<div>
+						<p>C#</p>
+						<p>До#</p>
+					</div>
+					<div>
+						<p>D</p>
+						<p>Ре</p>
+					</div>
+					<div>
+						<p>D#</p>
+						<p>Ре#</p>
+					</div>
+					<div>
+						<p>E</p>
+						<p>Ми</p>
+					</div>
+					<div>
+						<p>F</p>
+						<p>Фа</p>
+					</div>
+					<div>
+						<p>F#</p>
+						<p>Фа#</p>
+					</div>
+					<div>
+						<p>G</p>
+						<p>Соль</p>
+					</div>
+					<div>
+						<p>G#</p>
+						<p>Соль#</p>
+					</div>
+					<div>
+						<p>A</p>
+						<p>Ля</p>
+					</div>
+					<div>
+						<p>A#</p>
+						<p>Ля#</p>
+					</div>
+					<div>
+						<p>B</p>
+						<p>Си</p>
+					</div>					
+				</div>
+			</div>
+			<div class="ovtave-middle">
+				<div data-name="whiteKey" data-state="unpressed" data-index="51"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="52"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="53"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="54"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="55"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="56"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="57"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="58"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="59"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="60"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="61"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="62"></div>
+			</div>
+			<div class="octave-bottom">
+			</div>
+		</div>
+
+		<div class="piano-octave">
+			<div class="octave-top">
+				<div class="octave-top-name">
+					<p>Третья октава</p>
+					<p>(6)</p>
+				</div>
+				<div class="octave-top-border">
+				</div>
+				<div class="octave-top-notes">
+					<div>
+						<p>C</p>
+						<p>До</p>
+					</div>
+					<div>
+						<p>C#</p>
+						<p>До#</p>
+					</div>
+					<div>
+						<p>D</p>
+						<p>Ре</p>
+					</div>
+					<div>
+						<p>D#</p>
+						<p>Ре#</p>
+					</div>
+					<div>
+						<p>E</p>
+						<p>Ми</p>
+					</div>
+					<div>
+						<p>F</p>
+						<p>Фа</p>
+					</div>
+					<div>
+						<p>F#</p>
+						<p>Фа#</p>
+					</div>
+					<div>
+						<p>G</p>
+						<p>Соль</p>
+					</div>
+					<div>
+						<p>G#</p>
+						<p>Соль#</p>
+					</div>
+					<div>
+						<p>A</p>
+						<p>Ля</p>
+					</div>
+					<div>
+						<p>A#</p>
+						<p>Ля#</p>
+					</div>
+					<div>
+						<p>B</p>
+						<p>Си</p>
+					</div>					
+				</div>
+			</div>
+			<div class="ovtave-middle">
+				<div data-name="whiteKey" data-state="unpressed" data-index="63"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="64"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="65"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="66"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="67"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="68"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="69"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="70"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="71"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="72"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="73"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="74"></div>
+			</div>
+			<div class="octave-bottom">
+			</div>
+		</div>	
+
+		<div class="piano-octave">
+			<div class="octave-top">
+				<div class="octave-top-name">
+					<p>Четвертая октава</p>
+					<p>(7)</p>
+				</div>
+				<div class="octave-top-border">
+				</div>
+				<div class="octave-top-notes">
+					<div>
+						<p>C</p>
+						<p>До</p>
+					</div>
+					<div>
+						<p>C#</p>
+						<p>До#</p>
+					</div>
+					<div>
+						<p>D</p>
+						<p>Ре</p>
+					</div>
+					<div>
+						<p>D#</p>
+						<p>Ре#</p>
+					</div>
+					<div>
+						<p>E</p>
+						<p>Ми</p>
+					</div>
+					<div>
+						<p>F</p>
+						<p>Фа</p>
+					</div>
+					<div>
+						<p>F#</p>
+						<p>Фа#</p>
+					</div>
+					<div>
+						<p>G</p>
+						<p>Соль</p>
+					</div>
+					<div>
+						<p>G#</p>
+						<p>Соль#</p>
+					</div>
+					<div>
+						<p>A</p>
+						<p>Ля</p>
+					</div>
+					<div>
+						<p>A#</p>
+						<p>Ля#</p>
+					</div>
+					<div>
+						<p>B</p>
+						<p>Си</p>
+					</div>					
+				</div>
+			</div>
+			<div class="ovtave-middle">
+				<div data-name="whiteKey" data-state="unpressed" data-index="75"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="76"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="77"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="78"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="79"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="80"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="81"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="82"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="83"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="84"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="85"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="86"></div>
+			</div>
+			<div class="octave-bottom">
+			</div>
+		</div>
+
+		<div class="piano-octave">
+			<div class="octave-top">
+				<div class="octave-top-name">
+					<p>Пятая октава</p>
+					<p>(8)</p>
+				</div>
+				<div class="octave-top-border">
+				</div>
+				<div class="octave-top-notes">
+					<div>
+						<p>C</p>
+						<p>До</p>
+					</div>
+					<div>
+						<p>C#</p>
+						<p>До#</p>
+					</div>
+					<div>
+						<p>D</p>
+						<p>Ре</p>
+					</div>
+					<div>
+						<p>D#</p>
+						<p>Ре#</p>
+					</div>
+					<div>
+						<p>E</p>
+						<p>Ми</p>
+					</div>
+					<div>
+						<p>F</p>
+						<p>Фа</p>
+					</div>
+					<div>
+						<p>F#</p>
+						<p>Фа#</p>
+					</div>
+					<div>
+						<p>G</p>
+						<p>Соль</p>
+					</div>
+					<div>
+						<p>G#</p>
+						<p>Соль#</p>
+					</div>
+					<div>
+						<p>A</p>
+						<p>Ля</p>
+					</div>
+					<div>
+						<p>A#</p>
+						<p>Ля#</p>
+					</div>
+					<div>
+						<p>B</p>
+						<p>Си</p>
+					</div>					
+				</div>
+			</div>
+			<div class="ovtave-middle">
+				<div data-name="whiteKey" data-state="unpressed" data-index="87"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="88"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="89"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="90"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="91"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="92"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="93"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="94"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="95"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="96"></div>
+				<div data-name="blackKey" data-state="unpressed" data-index="97"></div>
+				<div data-name="whiteKey" data-state="unpressed" data-index="98"></div>
+			</div>
+			<div class="octave-bottom">
+			</div>
+		</div>
+
+	</div>
+</div>
+
+
+
+<div class="info">
+Это веб-приложение работает в браузерах:
+
+* Chrome
+* Opera
+* Firefox
+* Edge
+
+Чтобы избежать задержки звука, а также добавлять свои звуки,
+можно загрузить локальную версию приложения:
+
+<a href="https://yadi.sk/d/lHyFgXXX3U82xN" target="_blank">Скачать</a>
+
+</div>
+
+
+<script src="js/select_widget.js"></script>
+<script src="js/default_history.js"></script>
+<script src="js/default_audio_srcs.js"></script>
+<script src="js/script.js"></script>
+
+
+</body>
+</html>
+
+
+
